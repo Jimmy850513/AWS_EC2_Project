@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block stylesheet %}
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* 允许换行 */
+        gap: 1rem; /* 卡片之间的间隔 */
+        justify-content: center; /* 使卡片在容器内居中 */
+    }
+    .card {
+        width: 18rem; /* 卡片宽度 */
+    }
+</style>
+{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container" style="margin-top: 2em;">
+    {% for data in item_data %}
+    <div class="card">
+        <img src="{{data.Item_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{data.name}}</h5>
+          <p class="card-text">{{data.description}}</p>
+          <a href="#" class="btn btn-primary">update_Items</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block jsfunction %}{% endblock %}

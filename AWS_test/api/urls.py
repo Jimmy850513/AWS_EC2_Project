@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import index
+from .Controller.Item import Items_All_Views
 urlpatterns = [
-    path("",index,name='index')
+    path("",Items_All_Views.as_view(),name='Item_All_Views')
 ]
