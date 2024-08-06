@@ -78,10 +78,10 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
         "NAME": "aws_project",
-        'USER': 'dba',  
-        'PASSWORD': 'open2002',  
+        'USER': 'jimmy',  
+        'PASSWORD': 'home1234',  
         'HOST': 'localhost',  
-        'PORT': '5439', 
+        'PORT': '5432', 
     }
 }
 
