@@ -16,7 +16,8 @@ Including another URLconf
 """
 
 from django.urls import path
-from .Controller.Item import Items_All_Views
+from .Controller.Item import Items_All_Views,Item_Create
 urlpatterns = [
-    path("",Items_All_Views.as_view(),name='Item_All_Views')
+    path("",Items_All_Views.as_view(),name='Item_All_Views'),
+    path("items_create/",Item_Create.as_view(),name='Item_create')
 ]
